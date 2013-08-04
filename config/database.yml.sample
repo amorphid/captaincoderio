@@ -1,0 +1,18 @@
+# Use as template for database.yml
+# Add database.yml to .gitignore
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: blog_development
+  pool: 5
+  username: blog # change username to username you use to access postgres
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: blog_test
+  pool: 5
+  username: blog # change username to username you use to access postgres
+  password:
