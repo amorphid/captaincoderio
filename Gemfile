@@ -13,3 +13,8 @@ gem "uglifier",     "1.3.0"
 group :doc do
   gem "sdoc", "0.3.20", require: false
 end
+
+group :test, :development do
+  gem "capybara",    "2.1.0"
+  gem "rspec-rails", "2.14.0"
+end
