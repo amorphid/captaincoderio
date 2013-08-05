@@ -1,6 +1,5 @@
 require 'spec_helper'
 
-# http://guides.rubyonrails.org/getting_started.html#say-hello-rails
 describe "When I visit /welcome/index" do
   before { visit "/welcome/index" }
 

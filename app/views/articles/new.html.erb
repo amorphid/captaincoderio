@@ -1,0 +1,17 @@
+<h1>New Article</h1>
+
+<%= form_for @article do |i| %>
+  <p>
+    <%= i.label :name %>
+    <%= i.text_field :name %>
+  </p>
+
+  <p>
+    <%= i.label :body %>
+    <%= i.text_area :body %>
+  </p>
+
+  <p>
+    <%= i.submit "Submit" %>
+  </p>
+<% end %>

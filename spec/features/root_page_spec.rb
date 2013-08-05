@@ -1,6 +1,5 @@
 require 'spec_helper'
 
-# http://guides.rubyonrails.org/getting_started.html#setting-the-application-home-page
 describe "When I visit /" do
   before { visit "/" }
 

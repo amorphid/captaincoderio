@@ -1,5 +1,7 @@
 Blog::Application.routes.draw do
-  get "/", to: "welcome#index"
+  get "welcome/index"
 
-  get "/welcome/index", to: "welcome#index"
+  resources :articles, only: [:new, :create, :show]
+
+  root to: "welcome#index"
 end
