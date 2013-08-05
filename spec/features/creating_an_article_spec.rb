@@ -15,11 +15,25 @@ describe "Creating an article" do
     end
 
     it "should fail when missing name" do
-      pending
+      fill_in "article_name", :with => ""
+      fill_in "article_body", :with => body
+      click_button "Submit"
+      expect(page).to have_content("Name can't be blank")
     end
 
     it "should fail when missing body" do
-      pending
+      fill_in "article_name", :with => name
+      fill_in "article_body", :with => ""
+      click_button "Submit"
+      expect(page).to have_content("Body can't be blank")
+    end
+
+    it "should fail when completely blank" do
+      fill_in "article_name", :with => ""
+      fill_in "article_body", :with => ""
+      click_button "Submit"
+      expect(page).to have_content("Name can't be blank")
+      expect(page).to have_content("Body can't be blank")
     end
   end
 end
