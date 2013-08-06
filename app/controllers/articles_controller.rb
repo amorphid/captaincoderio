@@ -1,7 +1,4 @@
 class ArticlesController < ApplicationController
-  def banana
-  end
-
   def create
     @article = Article.new(post_params)
 
@@ -18,6 +15,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @article = Article.find(params[:id])
   end
 
 private
