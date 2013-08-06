@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(params[:article].permit(:name, :body))
+    @article = Article.new(post_params)
 
     if @article.save
       redirect_to article_path(@article), notice: "Article created successfully"
@@ -18,5 +18,11 @@ class ArticlesController < ApplicationController
   end
 
   def show
+  end
+
+private
+
+  def post_params
+    params[:article].permit(:name, :body)
   end
 end
