@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe "When I visit /welcome/index" do
   before { visit "/welcome/index" }
