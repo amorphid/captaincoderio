@@ -9,8 +9,14 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def destroy
+    find_article_via_params_id
+    @article.destroy
+    redirect_to articles_path, notice: "Article deleted successfully"
+  end
+
   def edit
-    find_with_params_id
+    find_article_via_params_id
   end
 
   def index
@@ -22,11 +28,11 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    find_with_params_id
+    find_article_via_params_id
   end
 
   def update
-    find_with_params_id
+    find_article_via_params_id
 
     if @article.update_attributes(post_params)
       redirect_to article_path(@article), :notice => "Article updated successfully"
@@ -37,7 +43,7 @@ class ArticlesController < ApplicationController
 
 private
 
-  def find_with_params_id
+  def find_article_via_params_id
     @article = Article.find(params[:id])
   end
 
@@ -45,3 +51,4 @@ private
     params[:article].permit(:name, :body)
   end
 end
+
