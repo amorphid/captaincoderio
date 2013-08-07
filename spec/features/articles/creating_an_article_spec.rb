@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe "Creating an article" do
-  before { visit "/articles/new" }
+  before { visit new_article_path }
 
   context "using the form" do
     let(:name) { name = "BEST ARTICLE EVER!!!  LOL :)" }
