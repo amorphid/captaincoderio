@@ -9,13 +9,13 @@ describe "The articles index" do
 
   it "should contain article_1" do
     within("#article_" + @article_1.id.to_s) do
-      expect(page.body).to have_content(@article_1.name)
+      click_link(@article_1.name)
     end
   end
 
   it "should contain article_2" do
     within("#article_" + @article_2.id.to_s) do
-      expect(page).to have_content(@article_2.name)
+      click_link(@article_2.name)
     end
   end
 end

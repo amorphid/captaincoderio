@@ -9,7 +9,11 @@
   <tbody>
     <% @articles.each do |article| %>
       <tr id="article_<%= article.id %>">
-        <td><%= article.name %></td>
+        <td>
+          <a href="/articles/<%= article.id %>">
+            <%= article.name %>
+          </a>
+        </td>
       </tr>
     <% end %>
   </tbody>
