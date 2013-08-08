@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_action :set_article, only: [:show, :edit, :update, :destroy]
+
   def create
     @article = Article.new(post_params)
 
@@ -10,14 +12,11 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    redirect_to "http://www.yahoo.com"
-    # find_article_via_params_id
-    # @article.destroy
-    # redirect_to articles_path, notice: "Article deleted successfully"
+    @article.destroy
+    redirect_to articles_path, notice: "Article deleted successfully"
   end
 
   def edit
-    find_article_via_params_id
   end
 
   def index
@@ -29,12 +28,9 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    find_article_via_params_id
   end
 
   def update
-    find_article_via_params_id
-
     if @article.update_attributes(post_params)
       redirect_to article_path(@article), :notice => "Article updated successfully"
     else
@@ -44,7 +40,7 @@ class ArticlesController < ApplicationController
 
 private
 
-  def find_article_via_params_id
+  def set_article
     @article = Article.find(params[:id])
   end
 

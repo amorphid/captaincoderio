@@ -3,6 +3,10 @@
 <h1>Article</h1>
 
 <p>
+  <%= link_to "Back", articles_path %>
+</p>
+
+<p>
   Name: <%= @article.name %>
 </p>
 
@@ -11,5 +15,5 @@
 </p>
 
 <o>
-  <%= link_to "Destroy", "/articles/#{@article}" %>
+  <%= link_to "Delete", article_path(@article), :method => :delete, :data => { :confirm => "Are you sure?" } %>
 </p>
