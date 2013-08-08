@@ -10,9 +10,10 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    find_article_via_params_id
-    @article.destroy
-    redirect_to articles_path, notice: "Article deleted successfully"
+    redirect_to "http://www.yahoo.com"
+    # find_article_via_params_id
+    # @article.destroy
+    # redirect_to articles_path, notice: "Article deleted successfully"
   end
 
   def edit
