@@ -1,13 +1,11 @@
 <% provide(:title, "Blog") %>
 
-<h1>Articles</h1>
-
-<ul>
+<ul class="articles_list">
   <% @articles.each do |article| %>
     <li id="article_<%= article.id %>">
-      <a href="/articles/<%= article.id %>" class="is_yellow">
+      <a href="/articles/<%= article.id %>">
         <h3><%= article.name %></h3>
-        <%= article.body %>
+        <%= article.body[0..199] %>...
       </a>
     </li>
   <% end %>

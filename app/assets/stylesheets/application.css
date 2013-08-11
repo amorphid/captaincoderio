@@ -2,3 +2,32 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+  color: black;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  margin: 0 auto;
+  width:  700px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+.articles_list {
+  list-style-type: none;
+}
+
+.navbar_item {
+  display: inline;
+}
+
+.navbar_head {
+  font-size: 2em;
+}

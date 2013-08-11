@@ -10,6 +10,15 @@
   </head>
 
   <body>
+    <ul>
+      <li class="navbar_head navbar_item">
+        <%= link_to "Captain Coder", root_path %>
+      </li>
+      <li class="navbar_item">
+        <%= link_to "Articles", articles_path %>
+      </li>
+    </ul>
+
     <% if flash[:notice] %>
       <div class="notice"><%= flash[:notice] %></div>
     <% end %>
