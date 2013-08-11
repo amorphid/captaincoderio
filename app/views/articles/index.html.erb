@@ -2,24 +2,16 @@
 
 <h1>Articles</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr id="article_<%= article.id %>">
-        <td>
-          <a href="/articles/<%= article.id %>">
-            <%= article.name %>
-          </a>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<ul>
+  <% @articles.each do |article| %>
+    <li id="article_<%= article.id %>">
+      <a href="/articles/<%= article.id %>" class="is_yellow">
+        <h3><%= article.name %></h3>
+        <%= article.body %>
+      </a>
+    </li>
+  <% end %>
+</ul>
 
 <p>
   <%= link_to "New", new_article_path %>

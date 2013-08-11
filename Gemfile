@@ -15,8 +15,13 @@ group :doc do
   gem "sdoc", "0.3.20", require: false
 end
 
+group :development do
+  gem "pry-rails"
+end
+
 group :test, :development do
   gem "capybara",           "2.1.0"
   gem "factory_girl_rails", "4.2.0"
+  gem "faker",              "1.2.0"
   gem "rspec-rails",        "2.14.0"
 end

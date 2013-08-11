@@ -1,8 +1,10 @@
+require "pry"
+
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def create
-    @article = Article.new(post_params)
+    @article = Article.new(article_params)
 
     if @article.save
       redirect_to article_path(@article), notice: "Article created successfully"
@@ -31,7 +33,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    if @article.update_attributes(post_params)
+    if @article.update_attributes(article_params)
       redirect_to article_path(@article), :notice => "Article updated successfully"
     else
       render "edit"
@@ -44,7 +46,7 @@ private
     @article = Article.find(params[:id])
   end
 
-  def post_params
+  def article_params
     params[:article].permit(:name, :body)
   end
 end
