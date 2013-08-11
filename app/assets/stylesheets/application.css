@@ -24,6 +24,10 @@ a:hover {
   list-style-type: none;
 }
 
+.article_title {
+  font-weight: 700;
+}
+
 .navbar_item {
   display: inline;
 }
