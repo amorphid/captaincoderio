@@ -2,6 +2,7 @@ require "spec_helper"
 
 describe "Creating an article" do
   before(:each) do
+    login
     visit articles_path
     click_link("New")
   end

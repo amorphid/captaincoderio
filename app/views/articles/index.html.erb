@@ -9,7 +9,7 @@
 
 <ul class="articles_list">
   <% @articles.each do |article| %>
-    <li article_<%= article.id %>">
+    <li id="article_<%= article.id %>">
       <a href="/articles/<%= article.id %>">
         <p class="article_title"><%= article.name %></p>
         <%= article.body[0..199] %>...

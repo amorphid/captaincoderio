@@ -6,6 +6,7 @@ describe "Updating an article" do
   let(:body) { article.body }
 
   before(:each) do
+    login
     visit edit_article_path(article)
   end
 

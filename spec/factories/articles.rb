@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  sequence(:name) {|n| "Cool Frikkin' Article \##{n}"}
+  sequence(:name) {|n| "Cool Frikking Article \##{n}"}
 
   factory :article do
     name { generate(:name) }
