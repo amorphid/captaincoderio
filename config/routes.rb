@@ -1,7 +1,6 @@
 Blog::Application.routes.draw do
-  get "welcome/index"
-
+  devise_for :users
   resources :articles
 
-  root to: "welcome#index"
+  root to: "articles#index"
 end

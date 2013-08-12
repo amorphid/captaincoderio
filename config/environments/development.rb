@@ -7,4 +7,7 @@ Blog::Application.configure do
   config.active_support.deprecation = :log
   config.active_record.migration_error = :page_load
   config.assets.debug = true
+
+  # allows Devise to send password recovery emails
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
