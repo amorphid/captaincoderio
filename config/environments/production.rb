@@ -16,7 +16,4 @@ Blog::Application.configure do
   # False by default.  True fixed a bug with destroy actions in articles.
   # https://github.com/amorphid/blog/tree/a58d389b73554ddfe272154b300f44d25f854092
   config.assets.compile = true
-
-  # Enables Devise to run properly on Heroku
-  config.assets.initialize_on_precompile = false
 end
