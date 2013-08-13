@@ -11,7 +11,7 @@
   <% @articles.each do |article| %>
     <li id="article_<%= article.id %>">
       <a href="/articles/<%= article.id %>">
-        <p class="article_title"><%= article.name %></p>
+        <p class="article_title"><%= article.title %></p>
         <%= article.body[0..199] %>...
       </a>
     </li>

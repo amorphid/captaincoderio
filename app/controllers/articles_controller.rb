@@ -47,7 +47,7 @@ private
   end
 
   def article_params
-    params[:article].permit(:name, :body)
+    params[:article].permit(:title, :body)
   end
 end
 
