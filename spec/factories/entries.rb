@@ -1,7 +1,7 @@
 FactoryGirl.define do
-  sequence(:title) {|n| "Cool Frikking Article \##{n}"}
+  sequence(:title) {|n| "Cool Frikking Entry \##{n}"}
 
-  factory :article do
+  factory :entry do
     title { generate(:title) }
     body Faker::Lorem.paragraphs(20).join
   end

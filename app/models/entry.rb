@@ -1,4 +1,4 @@
-class Article < ActiveRecord::Base
+class Entry < ActiveRecord::Base
   validates :title, presence: true
   validates :body, presence: true
 end

@@ -1,0 +1,20 @@
+<% provide(:title, @entry.title) %>
+
+<p>
+  <%= link_to "Back", entries_path %>
+</p>
+
+<% if user_signed_in? %>
+  <o>
+    <%= link_to "Delete", entry_path(@entry), :method => :delete, :data => { :confirm => "Are you sure?" } %>
+  </p>
+<% end %>
+
+<p class="entry_title">
+  <%= @entry.title %>
+</p>
+
+<p>
+  <%= @entry.body %>
+</p>
+

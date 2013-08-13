@@ -1,0 +1,19 @@
+<% provide(:title, "Blog") %>
+
+<% if user_signed_in? %>
+  <p>
+    <%= link_to "New", new_entry_path %>
+  </p>
+<% end %>
+
+
+<ul class="entries_list">
+  <% @entries.each do |entry| %>
+    <li id="entry_<%= entry.id %>">
+      <a href="/entries/<%= entry.id %>">
+        <p class="entry_title"><%= entry.title %></p>
+        <%= entry.body[0..199] %>...
+      </a>
+    </li>
+  <% end %>
+</ul>

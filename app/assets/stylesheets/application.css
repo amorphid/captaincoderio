@@ -20,12 +20,12 @@ a:hover {
   color: red;
 }
 
-.articles_list {
+.entries_list {
   list-style-type: none;
   padding-left: 0;
 }
 
-.article_title {
+.entry_title {
   font-weight: 700;
 }
 

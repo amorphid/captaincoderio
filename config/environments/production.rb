@@ -13,7 +13,7 @@ Blog::Application.configure do
   config.eager_load = true
   config.serve_static_assets = false
 
-  # False by default.  True fixed a bug with destroy actions in articles.
+  # False by default.  True fixed a bug with destroy actions in entries.
   # https://github.com/amorphid/blog/tree/a58d389b73554ddfe272154b300f44d25f854092
   config.assets.compile = true
 end

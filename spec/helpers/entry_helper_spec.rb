@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "ArtcileHelper" do
+describe "EntryHelper" do
   context "#normalize_title" do
     let(:str_a) { "It's the one that says 'Bad M@#$%^ F&*!@`'" }
     let(:str_b) { "This post_title is rather bland.  Sorry :P" }

@@ -1,40 +1,40 @@
 require "spec_helper"
 
-describe "Updating an article" do
-  let(:article) { FactoryGirl.create(:article) }
-  let(:title) { article.title }
-  let(:body) { article.body }
-
+describe "Creating an entry" do
   before(:each) do
     login
-    visit edit_article_path(article)
+    visit entries_path
+    click_link("New")
   end
 
   context "using the form" do
+    let(:title) { title = "BEST entry EVER!!!  LOL :)" }
+    let(:body) { body = "I am the body.\n\n.  You cannot defeat me." }
+
     it "should succeed when form is complete" do
-      fill_in "article_title", :with => title
-      fill_in "article_body", :with => body
+      fill_in "entry_title", :with => title
+      fill_in "entry_body", :with => body
       click_button "Submit"
-      expect(page).to have_content("Article updated successfully")
+      expect(page).to have_content("Entry created successfully")
     end
 
     it "should fail when missing name" do
-      fill_in "article_title", :with => ""
-      fill_in "article_body", :with => body
+      fill_in "entry_title", :with => ""
+      fill_in "entry_body", :with => body
       click_button "Submit"
       expect(page).to have_content("Title can't be blank")
     end
 
     it "should fail when missing body" do
-      fill_in "article_title", :with => title
-      fill_in "article_body", :with => ""
+      fill_in "entry_title", :with => title
+      fill_in "entry_body", :with => ""
       click_button "Submit"
       expect(page).to have_content("Body can't be blank")
     end
 
     it "should fail when completely blank" do
-      fill_in "article_title", :with => ""
-      fill_in "article_body", :with => ""
+      fill_in "entry_title", :with => ""
+      fill_in "entry_body", :with => ""
       click_button "Submit"
       expect(page).to have_content("Title can't be blank")
       expect(page).to have_content("Body can't be blank")

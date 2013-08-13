@@ -1,14 +1,13 @@
 require "spec_helper"
 
-describe "When reading an article" do
+describe "When reading an entry" do
   context "the page title" do
 
-    let(:article) { Article.first }
-    let(:title) { article.title }
+    let(:entry) { FactoryGirl.create(:entry) }
+    let(:title) { entry.title }
 
     before(:each) do
-      FactoryGirl.create(:article)
-      visit article_path(article)
+      visit entry_path(entry)
     end
 
     it "should include the blog title" do

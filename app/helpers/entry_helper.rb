@@ -1,4 +1,4 @@
-module ArticleHelper
+module EntryHelper
   def normalize_character(i)
     case i
     when /[A-Z]/ then i.downcase
@@ -20,4 +20,4 @@ module ArticleHelper
   end
 end
 
-include ArticleHelper
+include EntryHelper

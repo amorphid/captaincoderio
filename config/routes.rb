@@ -1,6 +1,7 @@
 Blog::Application.routes.draw do
   devise_for :users
-  resources :articles
 
-  root to: "articles#index"
+  resources :entries
+
+  root to: "entries#index"
 end
