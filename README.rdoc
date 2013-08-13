@@ -3,4 +3,4 @@
 # Installation instructions
 
 1.  Use "config/database.yml.sample" to set up database.
-2.  Run "rake secret" to create a secret_token.rb.
+2.  Use "config/initializers/secret_token.rb.sample" to set up a secret token.
