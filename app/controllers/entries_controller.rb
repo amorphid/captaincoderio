@@ -43,11 +43,10 @@ class EntriesController < ApplicationController
 private
 
   def set_entry
-    @entry = Entry.find(params[:id])
+    @entry = Entry.friendly.find(params[:id])
   end
 
   def entry_params
     params[:entry].permit(:title, :body)
   end
 end
-

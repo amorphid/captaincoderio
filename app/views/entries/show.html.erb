@@ -5,7 +5,11 @@
 </p>
 
 <% if user_signed_in? %>
-  <o>
+  <p>
+    <%= link_to "Edit", edit_entry_path(@entry) %>
+  </p>
+
+  <p>
     <%= link_to "Delete", entry_path(@entry), :method => :delete, :data => { :confirm => "Are you sure?" } %>
   </p>
 <% end %>
