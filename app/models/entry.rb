@@ -4,7 +4,7 @@ class Entry < ActiveRecord::Base
 
   def slug_candidates
     [
-      [:title, :body[0..70]]
+      [:title, :body.to_s[0..70]]
     ]
   end
 
