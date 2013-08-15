@@ -3,6 +3,7 @@ ruby "2.0.0"
 
 gem "coffee-rails", "4.0.0"
 gem "devise",       "3.0.2"
+gem "figaro",       "0.7.0"
 gem "friendly_id",  "5.0.0.beta1"
 gem "jbuilder",     "1.2.0"
 gem "jquery-rails", "3.0.4"

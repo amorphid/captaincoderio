@@ -2,5 +2,6 @@
 
 # Installation instructions
 
-1.  Use "config/database.yml.sample" to set up database.
-2.  Use "config/initializers/secret_token.rb.sample" to set up a secret token.
+1.  To configure database, use "config/database.yml.sample"
+2.  To configure secret_token, use "config/initializers/secret_token.rb.sample"
+3.  To configure email, "config/application.yml.sample".

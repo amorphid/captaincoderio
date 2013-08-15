@@ -15,6 +15,10 @@
 /log/*.log
 /tmp
 
-# Ignore private files
+# Ignore application configuration
+/config/application.yml
+/config/constants.rb
 /config/database.yml
 /congig/initializers/secret_token.rb
+
+

@@ -9,4 +9,16 @@ Blog::Application.configure do
   config.action_controller.allow_forgery_protection = false
   config.action_mailer.delivery_method = :test
   config.active_support.deprecation = :stderr
+
+  # sending email
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => ENV["email_domain"],
+    :user_name            => ENV["email_username"],
+    :password             => ENV["email_password"],
+    :authentication       => "plain",
+    :enable_starttls_auto => true
+  }
 end
