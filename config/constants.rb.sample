@@ -1,9 +1,0 @@
-EMAIL_SETTINGS = {
-  :address              => "smtp.gmail.com",
-  :port                 => 587,
-  :domain               => "mydomaincom",
-  :user_name            => "foo@bar.com",
-  :password             => "password123",
-  :authentication       => "plain",
-  :enable_starttls_auto => true
-}
