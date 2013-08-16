@@ -6,15 +6,15 @@
   </p>
 <% end %>
 
-<ul class="entries_list">
+<ul class="entries-list">
   <% @entries.each do |entry| %>
     <li id="entry_<%= entry.id %>">
       <%= link_to(entry) do %>
-        <p>
+        <p class="entry-title">
           <%= entry.title %>
         </p>
 
-        <p>
+        <p class="entry-item">
           <%= entry.body[0..199] + "..." %>
         </p>
       <% end %>

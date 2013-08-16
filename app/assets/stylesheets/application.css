@@ -3,12 +3,13 @@
  *= require_tree .
  */
 
-body {
+.app {
   color: black;
   font-family: sans-serif;
   font-size: 1.2em;
   margin: 0 auto;
   width:  700px;
+  word-wrap: break-word;
 }
 
 a {
@@ -20,19 +21,23 @@ a:hover {
   color: red;
 }
 
-.entries_list {
+.entries-list {
   list-style-type: none;
   padding-left: 0;
 }
 
-.entry_title {
+.entry-title {
   font-weight: 700;
 }
 
-.navbar_item {
+.entry-item {
+
+}
+
+.navbar-item {
   display: inline;
 }
 
-.navbar_head {
+.navbar-head {
   font-size: 2em;
 }
