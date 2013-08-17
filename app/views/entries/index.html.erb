@@ -1,9 +1,11 @@
 <% provide(:title, "Blog") %>
 
 <% if user_signed_in? %>
-  <p>
-    <%= link_to "New", new_entry_path %>
-  </p>
+  <ul>
+    <li class="navbar-item">
+      <%= link_to "New", new_entry_path %>
+    </li>
+  </ul>
 <% end %>
 
 <ul class="entries-list">
