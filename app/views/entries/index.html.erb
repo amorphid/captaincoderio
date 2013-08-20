@@ -2,21 +2,21 @@
 
 <% if user_signed_in? %>
   <ul>
-    <li class="navbar-item">
+    <li>
       <%= link_to "New", new_entry_path %>
     </li>
   </ul>
 <% end %>
 
-<ul class="entries-list">
+<ul class="index">
   <% @entries.each do |entry| %>
     <li id="entry_<%= entry.id %>">
       <%= link_to(entry) do %>
-        <p class="entry-title">
+        <h3>
           <%= entry.title %>
-        </p>
+        </h3>
 
-        <p class="entry-item">
+        <p>
           <%= entry.body[0..199] + "..." %>
         </p>
       <% end %>
