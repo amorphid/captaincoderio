@@ -21,6 +21,6 @@
 </p>
 
 <p>
-  <%= simple_format(@entry.body) %>
+  <%= @entry.body.html_safe %>
 </p>
 
