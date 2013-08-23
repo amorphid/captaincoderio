@@ -1,26 +1,21 @@
 <% provide(:title, @entry.title) %>
 
-<ul>
-  <li class="navabr navbar-item">
-    <%= link_to "Back", entries_path %>
+<ul class="nav">
+  <li class="nav-item">
+    <%= link_to "back", entries_path %>
   </li>
 
   <% if user_signed_in? %>
-    <li class="navbar-item">
-      | <%= link_to "Edit", edit_entry_path(@entry) %>
+    <li class="nav-item">
+      | <%= link_to "edit", edit_entry_path(@entry) %>
     </li>
 
-    <li class="navbar-item">
-      | <%= link_to "Delete", entry_path(@entry), :method => :delete, :data => { :confirm => "Are you sure?" } %>
+    <li class="nav-item">
+      | <%= link_to "delete", entry_path(@entry), :method => :delete, :data => { :confirm => "Are you sure?" } %>
     </li>
   <% end %>
 </ul>
 
 <p>
-  <%= @entry.title %>
-</p>
-
-<p>
   <%= @entry.body.html_safe %>
 </p>
-

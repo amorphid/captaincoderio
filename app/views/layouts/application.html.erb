@@ -8,20 +8,20 @@
   </head>
 
   <body>
-    <div id="site-top">&nbsp;</div>
+    <div class="head-top">&nbsp;</div>
 
-    <ul id="site-navbar" class="row">
-      <li class="navbar-head" id="site-name">
-        <%= link_to "Captain Coder", root_path %>
+    <ul class="head-nav">
+      <li class="head-nav-head head-name">
+        <%= link_to "Captain Coder", root_path, class: "head-nav-link" %>
       </li>
 
-      <li class="navbar-item">
-        <%= link_to "Entries", entries_path %>
+      <li class="head-nav-item">
+        <%= link_to "Entries", entries_path, class: "head-nav-link" %>
       </li>
 
       <% if user_signed_in? %>
-        <li class="navbar-item">
-          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+        <li class="head-nav-item">
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "head-nav-link" %>
         </li>
       <% end %>
     </ul>

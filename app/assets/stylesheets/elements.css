@@ -1,6 +1,4 @@
-a {
-  color: darkblue;
-}
+a { color: darkblue; }
 
 body {
   background-color: white;
@@ -13,13 +11,15 @@ body {
 }
 
 h1 {
+  display: block;
   font-size: 36px;
 }
 
 h2 {
- font-size: 28px;
+  display: block;
+  font-size: 28px;
 }
 
-html {
-  background-color: lemonchiffon;
-}
+html { background-color: lemonchiffon; }
+
+p { line-height: 1.2; }
