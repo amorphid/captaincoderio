@@ -1,8 +1,8 @@
 <% provide(:title, "Blog") %>
 
 <% if user_signed_in? %>
-  <ul>
-    <li>
+  <ul class="navbar">
+    <li class="navbar-item">
       <%= link_to "New", new_entry_path %>
     </li>
   </ul>
@@ -11,15 +11,14 @@
 <ul class="index">
   <% @entries.each do |entry| %>
     <li id="entry_<%= entry.id %>">
-      <%= link_to(entry) do %>
-        <h3>
-          <%= entry.title %>
-        </h3>
-
-        <p>
-          <%= entry.body[0..199] + "..." %>
-        </p>
-      <% end %>
+      <p>
+        <%= entry.created_at.to_date %> --
+      </p>
+      <h3>
+        <%= link_to(entry) do %>
+            <%= entry.title %>
+        <% end %>
+      </h3>
     </li>
   <% end %>
 </ul>

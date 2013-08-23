@@ -8,19 +8,19 @@
   </head>
 
   <body>
-    <ul class="header">
-      <li>
-        <h1>
-          <%= link_to "Captain Coder", root_path %>
-        </h1>
+    <div id="site-top">&nbsp;</div>
+
+    <ul id="site-navbar" class="row">
+      <li class="navbar-head" id="site-name">
+        <%= link_to "Captain Coder", root_path %>
       </li>
 
-      <li>
+      <li class="navbar-item">
         <%= link_to "Entries", entries_path %>
       </li>
 
       <% if user_signed_in? %>
-        <li>
+        <li class="navbar-item">
           <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
         </li>
       <% end %>
@@ -35,5 +35,7 @@
     <% end %>
 
     <%= yield %>
+
+    <div id="body-top">&nbsp;</div>
   </body>
 </html>

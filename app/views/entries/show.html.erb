@@ -1,16 +1,16 @@
 <% provide(:title, @entry.title) %>
 
 <ul>
-  <li>
+  <li class="navabr navbar-item">
     <%= link_to "Back", entries_path %>
   </li>
 
   <% if user_signed_in? %>
-    <li>
+    <li class="navbar-item">
       | <%= link_to "Edit", edit_entry_path(@entry) %>
     </li>
 
-    <li>
+    <li class="navbar-item">
       | <%= link_to "Delete", entry_path(@entry), :method => :delete, :data => { :confirm => "Are you sure?" } %>
     </li>
   <% end %>
